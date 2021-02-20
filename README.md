@@ -32,3 +32,11 @@ TypeScript is a language which builds on JavaScript, by adding static type defin
 ### Lerna
 
 A tool for managing JavaScript projects with multiple packages. This will be more decribed on Monorepo Section.
+
+### Eslint
+
+ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.
+
+### Prettier
+
+Prettier is an opinionated code formatter that helps the developer saving time by using auto formatter and avoid discuss style in code review.
