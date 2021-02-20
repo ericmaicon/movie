@@ -40,3 +40,9 @@ ESLint is a tool for identifying and reporting on patterns found in ECMAScript/J
 ### Prettier
 
 Prettier is an opinionated code formatter that helps the developer saving time by using auto formatter and avoid discuss style in code review.
+
+### Commitizen, Husky, Lint Stage and Commitlint
+
+Tools to create a standard with commit message and run hooks in git.
+
+###
