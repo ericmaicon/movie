@@ -11,6 +11,8 @@ module.exports = {
   testMatch: [join(__dirname, '**/*.test.{ts,tsx}')],
   moduleNameMapper: {
     '~/themes/(.*)': '<rootDir>/../../themes/$1',
+    '~/test/(.*)': '<rootDir>/test/$1',
     '~/(.*)': '<rootDir>/lib/$1',
   },
+  setupFilesAfterEnv: [join(__dirname, 'test/config/jest.setup.ts')],
 };

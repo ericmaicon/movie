@@ -6,7 +6,7 @@ This project is an architecture proof of concept with a movie API.
 
 ```sh
 yarn install
-yarn lerna bootstrap
+yarn bootstrap
 ```
 
 ### Running Storybook in UI kit
@@ -16,7 +16,7 @@ cd packages/uikit
 yarn storybook
 ```
 
-It will open the (http://localhost:6006)[http://localhost:6006] page with all components.
+It will open the [http://localhost:6006](http://localhost:6006) page with all components.
 
 To build the storybook, you should run:
 
@@ -72,6 +72,12 @@ Jest is a JavaScript Testing Framework with a focus on simplicity. This will be 
 
 ### Storybook
 
+Storybook is a tool for developing UI components in isolation for React. It makes building stunning UIs organized and efficient.
+
+### Styled Components
+
+Styled Components is a performant and flexible CSS-in-JS library. Building on many other CSS-in-JS libraries, it allows you to style apps quickly with string or object styles. It has predictable composition to avoid specificity issues with CSS.
+
 ## Project Structure
 
 The project uses mono repo as a structure to split the logic in 3 packages:
@@ -83,6 +89,8 @@ The project uses mono repo as a structure to split the logic in 3 packages:
 ### UI kit
 
 This is the package where the generic components is located. This component should be the main component library of the project and where every generic component will be located. No specific logic should be put in here.
+
+You can check every component created here using [Storybook](https://storybook.js.org/) as mentioned in `Running Storybook in UI kit` section
 
 ### Core
 

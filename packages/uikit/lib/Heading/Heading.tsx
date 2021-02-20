@@ -20,6 +20,30 @@ const Heading = ({ children, size = 1, ...rest }: HeadingProps) => {
           {children}
         </Styled.Heading1>
       );
+    case 2:
+      return (
+        <Styled.Heading2 size={size} {...rest}>
+          {children}
+        </Styled.Heading2>
+      );
+    case 3:
+      return (
+        <Styled.Heading3 size={size} {...rest}>
+          {children}
+        </Styled.Heading3>
+      );
+    case 4:
+      return (
+        <Styled.Heading4 size={size} {...rest}>
+          {children}
+        </Styled.Heading4>
+      );
+    case 5:
+      return (
+        <Styled.Heading5 size={size} {...rest}>
+          {children}
+        </Styled.Heading5>
+      );
   }
 };
 
