@@ -75,7 +75,7 @@ describe('Rating', () => {
     expect(starElements.length).toBe(5);
   });
 
-  it('should call onChange when click on a star', () => {
+  it('should call onChange when click on a filled star', () => {
     const handleChange = jest.fn();
 
     const { getAllByTestId } = render(
@@ -85,6 +85,27 @@ describe('Rating', () => {
     const [firstElement, secondElement, thirdElement] = getAllByTestId(
       'filled-star',
     );
+
+    expect(firstElement).toBeInTheDocument();
+
+    fireEvent.click(firstElement);
+    expect(handleChange).toHaveBeenCalledWith(2);
+
+    fireEvent.click(secondElement);
+    expect(handleChange).toHaveBeenCalledWith(4);
+
+    fireEvent.click(thirdElement);
+    expect(handleChange).toHaveBeenCalledWith(6);
+  });
+
+  it('should call onChange when click on an empty star', () => {
+    const handleChange = jest.fn();
+
+    const { getAllByTestId } = render(
+      <Rating data-testid="rating" value={0} onChange={handleChange} />,
+    );
+
+    const [firstElement, secondElement, thirdElement] = getAllByTestId('star');
 
     expect(firstElement).toBeInTheDocument();
 
