@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render a primary button 1`] = `
+.c0 {
+  background: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.2rem;
+  padding: 5px 15px;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.2rem;
+  line-height: 1em;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+  border: 1px solid #A62218;
+  color: #A62218;
+}
+
+.c0:hover {
+  border: 1px solid #1C1C1C;
+  color: #1C1C1C;
+}
+
+.c0:active {
+  border: 1px solid #1C1C1C;
+  color: #1C1C1C;
+}
+
+.c0:focus {
+  border: 1px solid #1C1C1C;
+  color: #1C1C1C;
+}
+
+.c0:disabled {
+  border: 1px solid #A8B4BE;
+  color: #1C1C1C;
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .c0 {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width:1025px) {
+  .c0 {
+    font-size: 1rem;
+  }
+}
+
+<button
+  class="c0"
+>
+  Button
+</button>
+`;
+
+exports[`Button should render a secondary button 1`] = `
+.c0 {
+  background: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.2rem;
+  padding: 5px 15px;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.2rem;
+  line-height: 1em;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+  border: none;
+  color: #E9E8E7;
+}
+
+.c0:hover {
+  color: #1C1C1C;
+}
+
+.c0:active {
+  color: #1C1C1C;
+}
+
+.c0:focus {
+  color: #1C1C1C;
+}
+
+.c0:disabled {
+  color: #1C1C1C;
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .c0 {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width:1025px) {
+  .c0 {
+    font-size: 1rem;
+  }
+}
+
+<button
+  class="c0"
+>
+  Button
+</button>
+`;
+
+exports[`Button should render correctly 1`] = `
+.c0 {
+  background: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.2rem;
+  padding: 5px 15px;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.2rem;
+  line-height: 1em;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+  border: 1px solid #A62218;
+  color: #A62218;
+}
+
+.c0:hover {
+  border: 1px solid #1C1C1C;
+  color: #1C1C1C;
+}
+
+.c0:active {
+  border: 1px solid #1C1C1C;
+  color: #1C1C1C;
+}
+
+.c0:focus {
+  border: 1px solid #1C1C1C;
+  color: #1C1C1C;
+}
+
+.c0:disabled {
+  border: 1px solid #A8B4BE;
+  color: #1C1C1C;
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .c0 {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width:1025px) {
+  .c0 {
+    font-size: 1rem;
+  }
+}
+
+<button
+  class="c0"
+>
+  Button
+</button>
+`;
