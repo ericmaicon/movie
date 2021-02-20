@@ -11,8 +11,8 @@ export default {
 
 const Template: Story<VideoCardProps> = (args) => <VideoCard {...args} />;
 
-export const VideoCard1 = Template.bind({});
-VideoCard1.args = {
+export const Default = Template.bind({});
+Default.args = {
   src:
     'https://www.themoviedb.org/t/p/w220_and_h330_face/drulhSX7P5TQlEMQZ3JoXKSDEfz.jpg',
   alt:

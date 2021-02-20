@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoGallery should render correctly 1`] = `
+.c1 {
+  cursor: pointer;
+  width: 100%;
+}
+
+.c1:hover {
+  box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.2);
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-gap: 15px;
+}
+
+.c0 img:first-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+<div
+  class="c0"
+  data-testid="video-galery"
+>
+  <img
+    alt="When the crew of a space junk collector ship called The Victory discovers a humanoid.."
+    class="c1"
+    src="https://www.themoviedb.org/t/p/w220_and_h330_face/drulhSX7P5TQlEMQZ3JoXKSDEfz.jpg"
+  />
+  <img
+    alt="When the crew of a space junk collector ship called The Victory discovers a humanoid.."
+    class="c1"
+    src="https://www.themoviedb.org/t/p/w220_and_h330_face/srYya1ZlI97Au4jUYAktDe3avyA.jpg"
+  />
+  <img
+    alt="When the crew of a space junk collector ship called The Victory discovers a humanoid.."
+    class="c1"
+    src="https://www.themoviedb.org/t/p/w220_and_h330_face/6TPZSJ06OEXeelx1U1VIAt0j9Ry.jpg"
+  />
+  <img
+    alt="When the crew of a space junk collector ship called The Victory discovers a humanoid.."
+    class="c1"
+    src="https://www.themoviedb.org/t/p/w220_and_h330_face/dWSnsAGTfc8U27bWsy2RfwZs0Bs.jpg"
+  />
+  <img
+    alt="When the crew of a space junk collector ship called The Victory discovers a humanoid.."
+    class="c1"
+    src="https://www.themoviedb.org/t/p/w220_and_h330_face/vfuzELmhBjBTswXj2Vqxnu5ge4g.jpg"
+  />
+  <img
+    alt="When the crew of a space junk collector ship called The Victory discovers a humanoid.."
+    class="c1"
+    src="https://www.themoviedb.org/t/p/w220_and_h330_face/c7VlGCCgM9GZivKSzBgzuOVxQn7.jpg"
+  />
+  <img
+    alt="When the crew of a space junk collector ship called The Victory discovers a humanoid.."
+    class="c1"
+    src="https://www.themoviedb.org/t/p/w220_and_h330_face/lOSdUkGQmbAl5JQ3QoHqBZUbZhC.jpg"
+  />
+  <img
+    alt="When the crew of a space junk collector ship called The Victory discovers a humanoid.."
+    class="c1"
+    src="https://www.themoviedb.org/t/p/w220_and_h330_face/6XYLiMxHAaCsoyrVo38LBWMw2p8.jpg"
+  />
+  <img
+    alt="When the crew of a space junk collector ship called The Victory discovers a humanoid.."
+    class="c1"
+    src="https://www.themoviedb.org/t/p/w220_and_h330_face/h9DIlghaiTxbQbt1FIwKNbQvEL.jpg"
+  />
+</div>
+`;
