@@ -1,0 +1,14 @@
+{
+  "colors": {
+    "black": "#000"
+  },
+  "typography": {
+    "heading": {
+      "fontFamily": "Roboto",
+      "fontWeight": 700,
+      "fontSize": "4rem",
+      "lineHeight": "1em",
+      "letterSpacing": "0em"
+    }
+  }
+}

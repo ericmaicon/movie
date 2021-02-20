@@ -4,9 +4,30 @@ This project is an architecture proof of concept with a movie API.
 
 ## How to Use this repo
 
-```
+```sh
 yarn install
 yarn lerna bootstrap
+```
+
+### Running Storybook in UI kit
+
+```sh
+cd packages/uikit
+yarn storybook
+```
+
+It will open the (http://localhost:6006)[http://localhost:6006] page with all components.
+
+To build the storybook, you should run:
+
+```sh
+yarn build
+```
+
+To run tests:
+
+```sh
+yarn test
 ```
 
 ## Technologies
@@ -45,4 +66,24 @@ Prettier is an opinionated code formatter that helps the developer saving time b
 
 Tools to create a standard with commit message and run hooks in git.
 
-###
+### Jest
+
+Jest is a JavaScript Testing Framework with a focus on simplicity. This will be more described on Test page.
+
+### Storybook
+
+## Project Structure
+
+The project uses mono repo as a structure to split the logic in 3 packages:
+
+1. uikit
+2. core
+3. site
+
+### UI kit
+
+This is the package where the generic components is located. This component should be the main component library of the project and where every generic component will be located. No specific logic should be put in here.
+
+### Core
+
+### Site
