@@ -5,7 +5,7 @@ exports[`Text should render correctly 1`] = `
   font-size: 0.2rem;
   font-family: Roboto;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.2rem;
   line-height: 1em;
   -webkit-letter-spacing: 0em;
   -moz-letter-spacing: 0em;
