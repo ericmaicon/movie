@@ -30,6 +30,13 @@ To run tests:
 yarn test
 ```
 
+### Running Development environment
+
+```sh
+cd packages/site
+yarn start
+```
+
 ## Technologies
 
 ### Yarn && Yarn workspace
@@ -78,6 +85,10 @@ Storybook is a tool for developing UI components in isolation for React. It make
 
 Styled Components is a performant and flexible CSS-in-JS library. Building on many other CSS-in-JS libraries, it allows you to style apps quickly with string or object styles. It has predictable composition to avoid specificity issues with CSS.
 
+### Create React App
+
+A React app boilerplate from Facebook to create a react app without much pain.
+
 ## Project Structure
 
 The project uses mono repo as a structure to split the logic in 3 packages:
@@ -90,8 +101,12 @@ The project uses mono repo as a structure to split the logic in 3 packages:
 
 This is the package where the generic components is located. This component should be the main component library of the project and where every generic component will be located. No specific logic should be put in here.
 
-You can check every component created here using [Storybook](https://storybook.js.org/) as mentioned in `Running Storybook in UI kit` section
+You can check every component created here using [Storybook](https://storybook.js.org/) as mentioned in `Running Storybook in UI kit` section.
 
 ### Core
 
 ### Site
+
+This is the package responsible for the application itself. Here we have the router configuration, theme injection, core integration with uikit components and so on.
+
+You can check the site in development mode using the commands listed in `Running Development environment` section.
