@@ -11,12 +11,8 @@ export interface ButtonProps
   children: ReactNode;
 }
 
-const Button = ({ children, variant = 'primary', ...rest }: ButtonProps) => {
-  return (
-    <Styled.Button variant={variant} {...rest}>
-      {children}
-    </Styled.Button>
-  );
+const Button = ({ children, ...rest }: ButtonProps) => {
+  return <Styled.Button {...rest}>{children}</Styled.Button>;
 };
 
 export default Button;
