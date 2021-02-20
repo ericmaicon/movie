@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should render correctly 1`] = `
+.c0 {
+  font-size: 0.2rem;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1em;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .c0 {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width:1025px) {
+  .c0 {
+    font-size: 1rem;
+  }
+}
+
+<p
+  class="c0"
+>
+  Text
+</p>
+`;
