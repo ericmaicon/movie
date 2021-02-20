@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES5",
+    "jsx": "react",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noEmit": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "noErrorTruncation": false
+  },
+  "exclude": ["node_modules"]
+}
