@@ -21,24 +21,15 @@ yarn storybook
 
 It will open the [http://localhost:6006](http://localhost:6006) page with all components.
 
-To build the storybook, you should run:
-
-```sh
-yarn build
-```
-
-To run tests:
-
-```sh
-yarn test
-```
-
 ### Running Development environment
 
 ```sh
 cd packages/site
+cp .env.local .env
 yarn start
 ```
+
+**ATTENTION:** you need to fill `REACT_APP_API_KEY` in .env with your API_KEY otherwise the api won't run.
 
 ## Technologies
 
@@ -106,10 +97,46 @@ This is the package where the generic components is located. This component shou
 
 You can check every component created here using [Storybook](https://storybook.js.org/) as mentioned in `Running Storybook in UI kit` section.
 
+To build this package, you can run the following commands:
+
+```sh
+cd packages/uikit
+yarn build
+```
+
+To test:
+
+```sh
+cd packages/uikit
+yarn test
+```
+
 ### Core
+
+Core is the package responsible for integrate with API and any other logic JS only.
+
+You can run tests and build it.
+
+To build this package, you can run the following commands:
+
+```sh
+cd packages/core
+yarn build
+```
+
+To test:
+
+```sh
+cd packages/core
+yarn test
+```
 
 ### Site
 
 This is the package responsible for the application itself. Here we have the router configuration, theme injection, core integration with uikit components and so on.
 
 You can check the site in development mode using the commands listed in `Running Development environment` section.
+
+# TODO
+
+1. Because of `display: grid`, this code supports only IE 16+

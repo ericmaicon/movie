@@ -31,6 +31,13 @@ module.exports = {
   rules: {
     'react/jsx-props-no-spreading': 'off',
     'no-use-before-define': 'off',
+    'class-methods-use-this': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      2,
+      {
+        args: 'none',
+      },
+    ],
     'react/jsx-filename-extension': [
       'warn',
       {

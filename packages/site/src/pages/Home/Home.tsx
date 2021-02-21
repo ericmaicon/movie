@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
+import Skeleton from 'react-loading-skeleton';
 
 import { Heading, VideoGallery } from '@movie/uikit';
 import { FormikValues } from 'formik';
@@ -9,7 +10,7 @@ import { Header } from '~/components/Header';
 
 import * as Styled from './styles';
 
-interface Item {
+export interface Item {
   id: string | number;
   image: string;
   title: string;
@@ -17,10 +18,9 @@ interface Item {
 }
 
 interface HomeProps {
-  // eslint-disable-next-line no-unused-vars
   onFilter: (values: FormikValues) => Promise<void>;
 
-  items: Item[];
+  items: Item[] | null;
 }
 
 export function Home({ onFilter, items, ...rest }: HomeProps) {
@@ -35,7 +35,7 @@ export function Home({ onFilter, items, ...rest }: HomeProps) {
         </Row>
         <Row>
           <Col sm={12}>
-            <VideoGallery items={items} />
+            {items ? <VideoGallery items={items} /> : <Skeleton />}
           </Col>
         </Row>
       </Container>

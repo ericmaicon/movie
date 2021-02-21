@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "declarationDir": "dist/typings",
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "paths": {
+      "~/themes/*": ["../../themes/*"],
+      "~/*": ["lib/*"]
+    }
+  },
+  "include": ["lib/**/*"],
+  "exclude": ["node_modules"]
+}

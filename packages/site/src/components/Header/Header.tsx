@@ -8,7 +8,6 @@ import { FormikValues, useFormik } from 'formik';
 import * as Styled from './styles';
 
 interface HeaderProps {
-  // eslint-disable-next-line no-unused-vars
   onFilter: (values: FormikValues) => Promise<void>;
 }
 

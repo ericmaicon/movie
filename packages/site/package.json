@@ -7,10 +7,11 @@
     "build": "node scripts/build.js",
     "test": "jest",
     "test:coverage": "jest --coverageReporters=text",
-    "lint": "yarn tsc --noEmit && yarn eslint src --ext js,ts,tsx"
+    "lint": "yarn eslint src --ext js,ts,tsx"
   },
   "dependencies": {
     "@babel/core": "7.12.3",
+    "@movie/core": "1.0.0",
     "@movie/uikit": "1.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
     "@svgr/webpack": "5.5.0",
@@ -41,6 +42,7 @@
     "react-dev-utils": "^11.0.2",
     "react-grid-system": "^7.1.1",
     "react-icons": "^4.2.0",
+    "react-loading-skeleton": "^2.1.1",
     "react-refresh": "^0.8.3",
     "react-router-dom": "^5.2.0",
     "resolve": "1.18.1",
@@ -68,6 +70,7 @@
   "devDependencies": {
     "@testing-library/user-event": "^12.7.1",
     "@types/react-router-dom": "^5.1.7",
+    "dotenv-webpack": "^6.0.0",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
     "web-vitals": "^1.1.0"
   },

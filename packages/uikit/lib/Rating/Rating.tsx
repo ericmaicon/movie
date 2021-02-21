@@ -6,7 +6,6 @@ import * as Styled from './styles';
 export interface RatingProps {
   value: number;
 
-  // eslint-disable-next-line no-unused-vars
   onChange?: (value: number) => void;
 }
 

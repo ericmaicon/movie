@@ -1,0 +1,33 @@
+{
+  "name": "@movie/core",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "types": "dist/typings/index.d.ts",
+  "scripts": {
+    "prebuild": "yarn rimraf dist",
+    "build": "rollup -c",
+    "postbuild": "tsc --project tsconfig.types.json --emitDeclarationOnly",
+    "test": "jest",
+    "test:coverage": "jest --coverageReporters=text",
+    "lint": "yarn tsc --noEmit && yarn eslint lib --ext js,ts,tsx"
+  },
+  "peerDependencies": {
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "react": "16.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.39.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "use-state-if-mounted": "^1.0.4"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^5.0.3"
+  }
+}
