@@ -29,3 +29,8 @@ jobs:
         run: yarn lint
       - name: Run Tests
         run: yarn test
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: packages/**/coverage
+          fail_ci_if_error: true
