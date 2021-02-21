@@ -9,7 +9,8 @@ import theme from '~/themes/theme.json';
 import { Header } from './components/Header';
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  html, body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;

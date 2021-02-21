@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig",
+  "exclude": ["node_modules", "**/*.stories.tsx", "**/*.test.tsx", "**/*.test.ts", "test"]
+}

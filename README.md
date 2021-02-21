@@ -4,9 +4,12 @@ This project is an architecture proof of concept with a movie API.
 
 ## How to Use this repo
 
+The follow commands is essential to get everything working. First step is install all dependencies. Second, it is needed to setup the link between all packages using lerna. To do so, it is needed to run bootstrap command. After that, each package needs to be compiled.
+
 ```sh
 yarn install
 yarn bootstrap
+yarn build
 ```
 
 ### Running Storybook in UI kit

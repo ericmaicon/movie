@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { VideoCard } from '~/VideoCard/styles';
 
 import * as Styled from './styles';

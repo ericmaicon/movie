@@ -1,15 +1,7 @@
-export * from './Button';
-
-export * from './Heading';
-
-export * from './Input';
-
-export * from './Rating';
-
-export * from './Text';
-
-export * from './VideoCard';
-
-export * from './VideoGallery';
-
-export * from './Button';
+export { default as Button } from './Button';
+export { default as Heading } from './Heading';
+export { default as Input } from './Input';
+export { default as Rating } from './Rating';
+export { default as Text } from './Text';
+export { default as VideoCard } from './VideoCard';
+export { default as VideoGallery } from './VideoGallery';

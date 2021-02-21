@@ -8,7 +8,8 @@
     "resolveJsonModule": true,
     "paths": {
       "~/themes/*": ["../../themes/*"],
-      "~/*": ["src/*"]
+      "~/*": ["src/*"],
+      "~/test/*": ["test/*"]
     }
   },
   "include": ["test/**/*", "src/**/*"],
