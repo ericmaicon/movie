@@ -1,26 +1,16 @@
 {
-  "extends": "./tsconfig.paths.json",
+  "extends": "../../tsconfig",
   "compilerOptions": {
-    "noEmit": true,
+    "noEmit": false,
     "declaration": true,
+    "declarationDir": "dist/typings",
     "baseUrl": ".",
     "resolveJsonModule": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "noFallthroughCasesInSwitch": true,
-    "isolatedModules": true,
-    "allowJs": true
+    "paths": {
+      "~/themes/*": ["../../themes/*"],
+      "~/*": ["src/*"]
+    }
   },
-  "include": [
-    "test/**/*",
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["test/**/*", "src/**/*"],
+  "exclude": ["node_modules"]
 }
