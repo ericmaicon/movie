@@ -2,6 +2,10 @@
 
 This project is an architecture proof of concept with a movie API.
 
+[![codecov](https://codecov.io/gh/ericmaicon/movie/branch/master/graph/badge.svg?token=3ILU47P6E8)](https://codecov.io/gh/ericmaicon/movie)
+
+Live: [https://movie-sand.vercel.app/](https://movie-sand.vercel.app/)
+
 ## How to Use this repo
 
 The follow commands is essential to get everything working. First step is install all dependencies. Second, it is needed to setup the link between all packages using lerna. To do so, it is needed to run bootstrap command. After that, each package needs to be compiled.
@@ -141,3 +145,4 @@ You can check the site in development mode using the commands listed in `Running
 
 1. Because of `display: grid`, this code supports only IE 16+
 2. Release commands
+3. Cypress
