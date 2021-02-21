@@ -1,10 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import { HomeContainer } from '~/containers';
 import theme from '~/themes/theme.json';
+
+import { Header } from './components/Header';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -19,6 +21,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Router>
+        <Header />
         <Switch>
           <Route path="/">
             <HomeContainer />

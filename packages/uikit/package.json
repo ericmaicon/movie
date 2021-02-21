@@ -1,7 +1,9 @@
 {
   "name": "@movie/uikit",
   "version": "1.0.0",
-  "license": "MIT",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
   "peerDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
@@ -19,6 +21,9 @@
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.12.17",
     "@react-theming/storybook-addon": "^1.0.3",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
     "@storybook/addon-actions": "^6.1.18",
     "@storybook/addon-essentials": "^6.1.18",
     "@storybook/addon-links": "^6.1.18",
@@ -27,10 +32,16 @@
     "@types/styled-components": "^5.1.7",
     "babel-loader": "8.1.0",
     "jest-styled-components": "^7.0.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.39.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
     "snapshot-diff": "^0.8.1",
     "tsconfig-paths-webpack-plugin": "^3.3.0"
   },
   "scripts": {
+    "prebuild": "yarn rimraf dist",
+    "build": "rollup -c",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
