@@ -27,4 +27,13 @@ export default class MovieDomain {
 
     return movies;
   }
+
+  /**
+   * get movie detail
+   */
+  async getMovieDetail(id: number | string) {
+    const movie = await this.movieData.getMovieById(id);
+
+    return movie;
+  }
 }

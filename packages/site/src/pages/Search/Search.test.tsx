@@ -2,9 +2,9 @@ import React from 'react';
 
 import snapshotDiff from 'snapshot-diff';
 
-import { fireEvent, render } from '~/test/index';
+import { fireEvent, render, waitFor } from '~/test/index';
 
-import { Home } from './Home';
+import { Search } from './Search';
 
 const items = [
   {
@@ -90,26 +90,41 @@ const items = [
   },
 ];
 
-describe('Home', () => {
+describe('Search', () => {
   it('should render correctly', () => {
     const { getByTestId } = render(
-      <Home onSelectItem={jest.fn()} data-testid="home" items={items} />,
+      <Search
+        onSelectItem={jest.fn()}
+        onFilterRating={jest.fn()}
+        data-testid="search"
+        items={items}
+      />,
     );
 
-    const homeElement = getByTestId('home');
+    const searchElement = getByTestId('search');
 
-    expect(homeElement).toBeInTheDocument();
-    expect(homeElement).toMatchSnapshot();
+    expect(searchElement).toBeInTheDocument();
+    expect(searchElement).toMatchSnapshot();
   });
 
   it('should render loading when there is no items', () => {
     const { rerender, asFragment } = render(
-      <Home onSelectItem={jest.fn()} data-testid="home" items={null} />,
+      <Search
+        onSelectItem={jest.fn()}
+        onFilterRating={jest.fn()}
+        data-testid="search"
+        items={null}
+      />,
     );
 
     const loading = asFragment();
     rerender(
-      <Home onSelectItem={jest.fn()} data-testid="home" items={items} />,
+      <Search
+        onSelectItem={jest.fn()}
+        onFilterRating={jest.fn()}
+        data-testid="search"
+        items={items}
+      />,
     );
     const withItems = asFragment();
 
@@ -120,12 +135,43 @@ describe('Home', () => {
   it('should call onSelectItem after click in an item', async () => {
     const onSelectItem = jest.fn();
     const { getAllByRole } = render(
-      <Home onSelectItem={onSelectItem} items={items} />,
+      <Search
+        onFilterRating={jest.fn()}
+        onSelectItem={onSelectItem}
+        items={items}
+      />,
     );
 
     const [itemElement] = getAllByRole('img');
 
     fireEvent.click(itemElement);
     expect(onSelectItem).toHaveBeenCalledWith(1);
+  });
+
+  it('should filter items by rating', async () => {
+    const onFilterRating = jest.fn();
+    const { getAllByTitle } = render(
+      <Search
+        onFilterRating={onFilterRating}
+        onSelectItem={jest.fn()}
+        items={items}
+      />,
+    );
+
+    const [starElement] = getAllByTitle('star');
+
+    fireEvent.click(starElement);
+    await waitFor(() =>
+      expect(onFilterRating).toHaveBeenCalledWith({
+        rating: 2,
+      }),
+    );
+
+    fireEvent.click(starElement);
+    await waitFor(() =>
+      expect(onFilterRating).toHaveBeenCalledWith({
+        rating: 2,
+      }),
+    );
   });
 });

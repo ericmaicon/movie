@@ -12,6 +12,11 @@ const movie = {
 };
 
 class MovieDataStub implements IMovieData {
+  // eslint-disable-next-line no-unused-vars
+  getMovieById(_id: string | number): Promise<Movie> {
+    return Promise.resolve(movie);
+  }
+
   getDiscoveryMovies(): Promise<Movie[]> {
     return Promise.resolve([movie]);
   }

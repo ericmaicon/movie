@@ -4,7 +4,7 @@ import { Button } from '~/Button/styles';
 import Heading from '~/Heading';
 import Rating from '~/Rating';
 import Text from '~/Text';
-import { VideoCard } from '~/VideoCard/styles';
+import VideoCard from '~/VideoCard';
 
 import * as Styled from './styles';
 

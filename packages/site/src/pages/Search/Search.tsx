@@ -6,14 +6,9 @@ import { Movie } from '@movie/core';
 import { Heading, VideoList, Text, Rating } from '@movie/uikit';
 import { FormikValues, useFormik } from 'formik';
 
-import { Footer } from '~/components/Footer';
-import { Header } from '~/components/Header';
-
 import * as Styled from './styles';
 
 interface SearchProps {
-  onFilter: (values: FormikValues) => Promise<void>;
-
   onFilterRating: (values: FormikValues) => Promise<void>;
 
   onSelectItem: (id: number | string) => Promise<void>;
@@ -22,7 +17,6 @@ interface SearchProps {
 }
 
 export function Search({
-  onFilter,
   onFilterRating,
   onSelectItem,
   items,
@@ -41,9 +35,16 @@ export function Search({
     formik.submitForm();
   }, [formik.values]);
 
+  function setRatingValue(selectedValue: number) {
+    if (selectedValue === formik.values.rating) {
+      formik.setFieldValue('rating', 0);
+    } else {
+      formik.setFieldValue('rating', selectedValue);
+    }
+  }
+
   return (
     <div {...rest}>
-      <Header onFilter={onFilter} />
       <Container>
         <Row>
           <Styled.HeaderContainer sm={6}>
@@ -52,10 +53,7 @@ export function Search({
           <Styled.RatingContainer sm={6}>
             <Text>Filter by Rating:</Text>
             <form onSubmit={formik.handleSubmit} data-testid="form">
-              <Rating
-                onChange={(value) => formik.setFieldValue('rating', value)}
-                value={formik.values.rating}
-              />
+              <Rating onChange={setRatingValue} value={formik.values.rating} />
             </form>
           </Styled.RatingContainer>
         </Row>
@@ -70,7 +68,6 @@ export function Search({
           </Col>
         </Row>
       </Container>
-      <Footer />
     </div>
   );
 }

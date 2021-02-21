@@ -49,11 +49,38 @@ export default class MovieData implements IMovieData {
     });
 
     return data.results.map((item: any) => ({
-      image: `https://www.themoviedb.org/t/p/w220_and_h330_face${item.backdrop_path}`,
+      image: item.backdrop_path
+        ? `https://www.themoviedb.org/t/p/w220_and_h330_face${item.backdrop_path}`
+        : '',
       title: item.title,
       id: item.id,
       description: item.overview,
       rating: item.vote_average,
     }));
+  }
+
+  /**
+   * get Movie by id
+   * @param id
+   */
+  async getMovieById(id: string | number): Promise<Movie> {
+    const item = await this.infra.fetchData<any>({
+      endpoint: `/movie/${id}`,
+    });
+
+    return {
+      image: item.backdrop_path
+        ? `https://www.themoviedb.org/t/p/w220_and_h330_face${item.backdrop_path}`
+        : '',
+      title: item.title,
+      id: item.id,
+      description: item.overview,
+      rating: item.vote_average,
+      budget: item.budget,
+      popularity: item.popularity,
+      releaseDate: item.release_date,
+      revenue: item.revenue,
+      tagline: item.tagline,
+    };
   }
 }

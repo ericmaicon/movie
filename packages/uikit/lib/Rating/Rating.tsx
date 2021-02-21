@@ -27,6 +27,7 @@ const Rating = ({ value, onChange, ...rest }: RatingProps) => {
               <Styled.Star
                 data-testid="star"
                 key={index}
+                title="star"
                 onClick={() => handleClickStar(index)}
               />
             );
@@ -36,6 +37,7 @@ const Rating = ({ value, onChange, ...rest }: RatingProps) => {
             <Styled.FilledStar
               data-testid="filled-star"
               key={index}
+              title="voted-star"
               onClick={() => handleClickStar(index)}
             />
           );

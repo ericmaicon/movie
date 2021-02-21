@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render } from '~/test/index';
+import { fireEvent, render } from '~/test/index';
 
 import VideoGallery from './VideoGallery';
 
@@ -73,7 +73,11 @@ const items = [
 describe('VideoGallery', () => {
   it('should render correctly', () => {
     const { getByTestId } = render(
-      <VideoGallery data-testid="video-galery" items={items} />,
+      <VideoGallery
+        data-testid="video-galery"
+        onSelectItem={jest.fn()}
+        items={items}
+      />,
     );
 
     const videoGalleryElement = getByTestId('video-galery');
@@ -81,5 +85,16 @@ describe('VideoGallery', () => {
     expect(videoGalleryElement).toBeInTheDocument();
     expect(videoGalleryElement.childElementCount).toBe(9);
     expect(videoGalleryElement).toMatchSnapshot();
+  });
+
+  it('should call selectItem when click on an item', () => {
+    const handleSelectItem = jest.fn();
+    const { getAllByTestId } = render(
+      <VideoGallery onSelectItem={handleSelectItem} items={items} />,
+    );
+
+    const [videoCardElement] = getAllByTestId('video-card');
+    fireEvent.click(videoCardElement);
+    expect(handleSelectItem).toHaveBeenCalledWith(1);
   });
 });

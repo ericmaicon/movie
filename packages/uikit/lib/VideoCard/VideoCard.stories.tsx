@@ -18,3 +18,10 @@ Default.args = {
   alt:
     'When the crew of a space junk collector ship called The Victory discovers a humanoid..',
 };
+
+export const NoImage = Template.bind({});
+NoImage.args = {
+  src: 'https://www.themoviedb.org22/drulhSX7P5TQlEMQZ3JoXKSDEfz.jpg',
+  alt:
+    'When the crew of a space junk collector ship called The Victory discovers a humanoid..',
+};

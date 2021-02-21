@@ -37,12 +37,11 @@ function MovieDomainFactory() {
   };
 }
 
-describe('Movie - getMovies', () => {
-  test('should list movies', async () => {
+describe('Movie - getMovieDetail', () => {
+  test('should show movie detail', async () => {
     const { movieDomain } = MovieDomainFactory();
-    const movies = await movieDomain.getMovies('query');
+    const tempMovie = await movieDomain.getMovieDetail(1);
 
-    expect(movies.length).toBe(1);
-    expect(movies).toStrictEqual([movie]);
+    expect(tempMovie).toStrictEqual(movie);
   });
 });

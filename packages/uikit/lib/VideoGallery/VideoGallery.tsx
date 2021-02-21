@@ -12,13 +12,20 @@ export interface Item {
 
 export interface VideoGalleryProps {
   items: Item[];
+  onSelectItem: (id: string | number) => void;
 }
 
-const VideoGallery = ({ items, ...rest }: VideoGalleryProps) => {
+const VideoGallery = ({ items, onSelectItem, ...rest }: VideoGalleryProps) => {
   return (
     <Styled.VideoGallery {...rest}>
       {items.map((item: Item) => (
-        <VideoCard key={item.id} src={item.image} alt={item.title} />
+        <VideoCard
+          data-testid="video-card"
+          key={item.id}
+          src={item.image}
+          alt={item.title}
+          onClick={() => onSelectItem(item.id)}
+        />
       ))}
     </Styled.VideoGallery>
   );

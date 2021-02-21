@@ -4,6 +4,11 @@ export interface Movie {
   id: number;
   description: string;
   rating: number;
+  budget?: number;
+  popularity?: string;
+  releaseDate?: string;
+  revenue?: number;
+  tagline?: string;
 }
 
 export interface GetMoviesParam {
@@ -13,4 +18,5 @@ export interface GetMoviesParam {
 export default interface IMovieData {
   getDiscoveryMovies(): Promise<Movie[]>;
   getMovies(params?: GetMoviesParam): Promise<Movie[]>;
+  getMovieById(id: string | number): Promise<Movie>;
 }

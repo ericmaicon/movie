@@ -19,4 +19,22 @@ describe('VideoCard', () => {
     expect(textElement).toHaveAttribute('src');
     expect(textElement).toMatchSnapshot();
   });
+
+  it('should render error image', () => {
+    const { getByTestId } = render(<VideoCard data-testid="video-card" />);
+
+    const textElement = getByTestId('video-card');
+
+    expect(textElement).toMatchSnapshot();
+  });
+
+  it('should render error image', () => {
+    const { getByTestId } = render(
+      <VideoCard data-testid="video-card" src="some invalid url" />,
+    );
+
+    const textElement = getByTestId('video-card');
+
+    expect(textElement).toMatchSnapshot();
+  });
 });
