@@ -140,3 +140,4 @@ You can check the site in development mode using the commands listed in `Running
 # TODO
 
 1. Because of `display: grid`, this code supports only IE 16+
+2. Release commands
