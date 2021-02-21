@@ -32,10 +32,10 @@ function MovieDomainFactory() {
   };
 }
 
-describe('Movie - getMovies', () => {
+describe('Movie - discover', () => {
   test('should list movies', async () => {
     const { movieDomain } = MovieDomainFactory();
-    const movies = await movieDomain.getMovies('query');
+    const movies = await movieDomain.discover();
 
     expect(movies.length).toBe(1);
     expect(movies).toStrictEqual([movie]);

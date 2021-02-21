@@ -1,17 +1,25 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
-import { MovieDomain, useAsync } from '@movie/core';
+import { MovieDomain, Movie, useAsync } from '@movie/core';
+import { FormikValues } from 'formik';
 
-import { Home, Item } from '~/pages/Home/Home';
+import { Home } from '~/pages/Home/Home';
 
 export function HomeContainer() {
   const movieDomain = new MovieDomain();
-  const { value } = useAsync(() => movieDomain.getMovies());
+  const history = useHistory();
+  const { value } = useAsync<Movie[]>(() => movieDomain.discover());
 
-  // eslint-disable-next-line no-empty-function
-  async function handleFilter() {}
+  async function handleFilter({ search }: FormikValues) {
+    if (search) {
+      history.push(`/search?search=${search}`);
+    } else {
+      history.push(`/`);
+    }
+  }
 
-  return <Home onFilter={handleFilter} items={value as Item[]} />;
+  return <Home onFilter={handleFilter} items={value} />;
 }
 
 export default HomeContainer;

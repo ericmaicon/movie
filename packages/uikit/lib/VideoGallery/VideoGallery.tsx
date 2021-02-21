@@ -8,7 +8,6 @@ export interface Item {
   id: string | number;
   image: string;
   title: string;
-  link: string;
 }
 
 export interface VideoGalleryProps {

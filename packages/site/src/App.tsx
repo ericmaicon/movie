@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
-import { HomeContainer } from '~/containers';
+import { HomeContainer, SearchContainer } from '~/containers';
 import theme from '~/themes/theme.json';
 
 const { API_URL, API_KEY } = process.env;
@@ -33,6 +33,9 @@ function App() {
       <GlobalStyle />
       <Router>
         <Switch>
+          <Route path="/search">
+            <SearchContainer />
+          </Route>
           <Route path="/">
             <HomeContainer />
           </Route>

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import userEvent from '@testing-library/user-event';
+import snapshotDiff from 'snapshot-diff';
 
 import { fireEvent, render, waitFor } from '~/test/index';
 
@@ -91,6 +92,20 @@ describe('Home', () => {
 
     expect(homeElement).toBeInTheDocument();
     expect(homeElement).toMatchSnapshot();
+  });
+
+  it('should render loading when there is no items', () => {
+    const { rerender, asFragment, getByTestId } = render(
+      <Home onFilter={jest.fn()} data-testid="home" />,
+    );
+
+    const loading = asFragment();
+    rerender(<Home onFilter={jest.fn()} data-testid="home" items={items} />);
+    const withItems = asFragment();
+
+    expect(getByTestId('home')).toBeDisabled();
+    expect(withItems).toMatchSnapshot();
+    expect(snapshotDiff(loading, withItems)).toMatchSnapshot();
   });
 
   it('should call onFilter after submit form', async () => {

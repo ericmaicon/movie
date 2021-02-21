@@ -10,18 +10,16 @@ export default class MovieData implements IMovieData {
   }
 
   /**
-   * get movies
-   *
-   * @param params
+   * get discovery movies
    */
-  // eslint-disable-next-line no-unused-vars
-  async getMovies(_params?: GetMoviesParam): Promise<Movie[]> {
+  async getDiscoveryMovies(): Promise<Movie[]> {
     const data = await this.infra.fetchData<any>({
       endpoint: `/discover/movie`,
       query: {
         language: 'en-US',
         sort_by: 'popularity.desc',
         page: 1,
+        with_keywords: '',
       },
     });
 
@@ -29,6 +27,33 @@ export default class MovieData implements IMovieData {
       image: `https://www.themoviedb.org/t/p/w220_and_h330_face${item.backdrop_path}`,
       title: item.title,
       id: item.id,
+      description: item.overview,
+      rating: item.vote_average,
+    }));
+  }
+
+  /**
+   * get movies
+   *
+   * @param params
+   */
+  async getMovies(params: GetMoviesParam): Promise<Movie[]> {
+    const { search } = params;
+    const data = await this.infra.fetchData<any>({
+      endpoint: `/search/movie`,
+      query: {
+        language: 'en-US',
+        page: 1,
+        query: search,
+      },
+    });
+
+    return data.results.map((item: any) => ({
+      image: `https://www.themoviedb.org/t/p/w220_and_h330_face${item.backdrop_path}`,
+      title: item.title,
+      id: item.id,
+      description: item.overview,
+      rating: item.vote_average,
     }));
   }
 }

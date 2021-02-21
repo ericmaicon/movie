@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import Skeleton from 'react-loading-skeleton';
 
+import { Movie } from '@movie/core';
 import { Heading, VideoGallery } from '@movie/uikit';
 import { FormikValues } from 'formik';
 
@@ -10,20 +11,13 @@ import { Header } from '~/components/Header';
 
 import * as Styled from './styles';
 
-export interface Item {
-  id: string | number;
-  image: string;
-  title: string;
-  link: string;
-}
-
 interface HomeProps {
   onFilter: (values: FormikValues) => Promise<void>;
 
-  items: Item[] | null;
+  items: Movie[] | null;
 }
 
-export function Home({ onFilter, items, ...rest }: HomeProps) {
+export function Home({ onFilter, items = [], ...rest }: HomeProps) {
   return (
     <div {...rest}>
       <Header onFilter={onFilter} />
@@ -35,7 +29,7 @@ export function Home({ onFilter, items, ...rest }: HomeProps) {
         </Row>
         <Row>
           <Col sm={12}>
-            {items ? <VideoGallery items={items} /> : <Skeleton />}
+            {items ? <VideoGallery items={items} /> : <Skeleton height={150} />}
           </Col>
         </Row>
       </Container>

@@ -1,0 +1,366 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoList should render correctly 1`] = `
+.c6 {
+  background: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.2rem;
+  padding: 5px 15px;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.2rem;
+  line-height: 1em;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+  border: 1px solid #A62218;
+  color: #A62218;
+}
+
+.c6:hover {
+  border: 1px solid #1C1C1C;
+  color: #1C1C1C;
+}
+
+.c6:active {
+  border: 1px solid #1C1C1C;
+  color: #1C1C1C;
+}
+
+.c6:focus {
+  border: 1px solid #1C1C1C;
+  color: #1C1C1C;
+}
+
+.c6:disabled {
+  border: 1px solid #A8B4BE;
+  color: #1C1C1C;
+}
+
+.c2 {
+  margin: 0px;
+  font-size: 0.5rem;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1em;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c5 {
+  cursor: pointer;
+  margin: 0px 1px;
+}
+
+.c7 {
+  cursor: pointer;
+  margin: 0px 1px;
+}
+
+.c3 {
+  font-size: 0.2rem;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.2rem;
+  line-height: 1em;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+}
+
+.c1 {
+  cursor: pointer;
+  width: 100%;
+}
+
+.c1:hover {
+  box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.2);
+}
+
+.c0 {
+  list-style: none;
+}
+
+.c0 li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0px;
+}
+
+.c0 li img {
+  width: 100px;
+  padding: 0px 10px;
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .c6 {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width:1025px) {
+  .c6 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .c2 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:1025px) {
+  .c2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .c3 {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width:1025px) {
+  .c3 {
+    font-size: 1rem;
+  }
+}
+
+<ul
+  class="c0"
+  data-testid="video-galery"
+>
+  <li>
+    <img
+      alt="When the crew"
+      class="c1"
+      data-testid="image"
+      src="https://www.themoviedb.org/t/p/w220_and_h330_face/drulhSX7P5TQlEMQZ3JoXKSDEfz.jpg"
+    />
+    <div>
+      <h4
+        class="c2"
+        data-testid="header"
+        size="5"
+      >
+        When the crew
+      </h4>
+      <p
+        class="c3"
+      >
+        When the crew of a space junk collector ship called The Victory discovers a humanoid..
+      </p>
+      <div
+        class="c4"
+      >
+        <svg
+          class="c5"
+          data-testid="filled-star"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+          />
+        </svg>
+        <svg
+          class="c5"
+          data-testid="filled-star"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+          />
+        </svg>
+        <svg
+          class="c5"
+          data-testid="filled-star"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+          />
+        </svg>
+        <svg
+          class="c5"
+          data-testid="filled-star"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+          />
+        </svg>
+        <svg
+          class="c5"
+          data-testid="filled-star"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+          />
+        </svg>
+      </div>
+      <button
+        class="c6"
+      >
+        Check it out
+      </button>
+    </div>
+  </li>
+  <li>
+    <img
+      alt="When the crew"
+      class="c1"
+      data-testid="image"
+      src="https://www.themoviedb.org/t/p/w220_and_h330_face/drulhSX7P5TQlEMQZ3JoXKSDEfz.jpg"
+    />
+    <div>
+      <h4
+        class="c2"
+        data-testid="header"
+        size="5"
+      >
+        When the crew
+      </h4>
+      <p
+        class="c3"
+      >
+        When the crew of a space junk collector ship called The Victory discovers a humanoid..
+      </p>
+      <div
+        class="c4"
+      >
+        <svg
+          class="c5"
+          data-testid="filled-star"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"
+          />
+        </svg>
+        <svg
+          class="c7"
+          data-testid="star"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3zM664.8 561.6l36.1 210.3L512 672.7 323.1 772l36.1-210.3-152.8-149L417.6 382 512 190.7 606.4 382l211.2 30.7-152.8 148.9z"
+          />
+        </svg>
+        <svg
+          class="c7"
+          data-testid="star"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3zM664.8 561.6l36.1 210.3L512 672.7 323.1 772l36.1-210.3-152.8-149L417.6 382 512 190.7 606.4 382l211.2 30.7-152.8 148.9z"
+          />
+        </svg>
+        <svg
+          class="c7"
+          data-testid="star"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3zM664.8 561.6l36.1 210.3L512 672.7 323.1 772l36.1-210.3-152.8-149L417.6 382 512 190.7 606.4 382l211.2 30.7-152.8 148.9z"
+          />
+        </svg>
+        <svg
+          class="c7"
+          data-testid="star"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 1024 1024"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3zM664.8 561.6l36.1 210.3L512 672.7 323.1 772l36.1-210.3-152.8-149L417.6 382 512 190.7 606.4 382l211.2 30.7-152.8 148.9z"
+          />
+        </svg>
+      </div>
+      <button
+        class="c6"
+      >
+        Check it out
+      </button>
+    </div>
+  </li>
+</ul>
+`;

@@ -9,10 +9,21 @@ export default class MovieDomain {
   }
 
   /**
-   * get list of movies
+   * get list of discovery movies
    */
-  async getMovies() {
-    const movies = await this.movieData.getMovies();
+  async discover() {
+    const movies = await this.movieData.getDiscoveryMovies();
+
+    return movies;
+  }
+
+  /**
+   * get list of movies by search
+   */
+  async getMovies(search: string) {
+    const movies = await this.movieData.getMovies({
+      search,
+    });
 
     return movies;
   }
