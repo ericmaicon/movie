@@ -5,17 +5,25 @@
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "types": "dist/typings/packages/uikit/lib/index.d.ts",
+  "scripts": {
+    "prebuild": "yarn rimraf dist",
+    "build": "rollup -c",
+    "postbuild": "tsc --project tsconfig.types.json --emitDeclarationOnly",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "test": "jest",
+    "test:coverage": "jest --coverageReporters=text",
+    "lint": "yarn tsc --noEmit && yarn eslint lib --ext js,ts,tsx"
+  },
   "peerDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "jest-styled-components": "^7.0.3",
     "react": "16.8.0",
     "react-dom": "16.8.0",
+    "react-icons": "^4.2.0",
     "snapshot-diff": "^0.8.1",
     "styled-components": "^5.2.1"
-  },
-  "dependencies": {
-    "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
@@ -39,15 +47,5 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.30.0",
     "tsconfig-paths-webpack-plugin": "^3.3.0"
-  },
-  "scripts": {
-    "prebuild": "yarn rimraf dist",
-    "build": "rollup -c",
-    "postbuild": "tsc --project tsconfig.types.json --emitDeclarationOnly",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "test": "jest",
-    "test:coverage": "jest --coverageReporters=text",
-    "lint": "yarn tsc --noEmit && yarn eslint lib --ext js,ts,tsx"
   }
 }

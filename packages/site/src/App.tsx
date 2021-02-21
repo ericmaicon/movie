@@ -6,8 +6,6 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { HomeContainer } from '~/containers';
 import theme from '~/themes/theme.json';
 
-import { Header } from './components/Header';
-
 const GlobalStyle = createGlobalStyle`
   html, body {
     font-family: 'Roboto', sans-serif;
@@ -22,7 +20,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Router>
-        <Header />
         <Switch>
           <Route path="/">
             <HomeContainer />

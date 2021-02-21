@@ -73,10 +73,112 @@ exports[`Header should render correctly 1`] = `
   color: #1C1C1C;
 }
 
+.c5 {
+  margin: 0px;
+  font-size: 2.5rem;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1em;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+}
+
+.c8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  color: #1C1C1C;
+  padding-left: 10px;
+}
+
+.c10 {
+  background: transparent;
+  border: none;
+  color: #1C1C1C;
+  font-size: 0.2rem;
+  height: 100%;
+  padding: 10px 20px;
+  margin: 0px;
+  width: 100%;
+  outline: none;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.2rem;
+  line-height: 1em;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+}
+
+.c10:disabled {
+  cursor: not-allowed;
+}
+
+.c10::-webkit-input-placeholder {
+  color: #1C1C1C;
+  font-style: italic;
+}
+
+.c10::-moz-placeholder {
+  color: #1C1C1C;
+  font-style: italic;
+}
+
+.c10:-ms-input-placeholder {
+  color: #1C1C1C;
+  font-style: italic;
+}
+
+.c10::placeholder {
+  color: #1C1C1C;
+  font-style: italic;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #E9E8E7;
+  border: 1px solid #1C1C1C;
+  box-sizing: border-box;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: horizontal;
+  -ms-flex-direction: horizontal;
+  flex-direction: horizontal;
+  height: 30px;
+}
+
+.c6 {
+  font-size: 0.2rem;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.2rem;
+  line-height: 1em;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+}
+
 .c0 {
   background: url('/images/header.jpg') no-repeat center center fixed;
   background-size: cover;
-  min-height: 433px;
+  min-height: 600px;
 }
 
 .c1 {
@@ -92,6 +194,23 @@ exports[`Header should render correctly 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding-top: 20px;
+}
+
+.c4 {
+  color: #E9E8E7;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.c4 form {
+  margin-top: 50px;
+}
+
+.c9 {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 @media (min-width:768px) and (max-width:1024px) {
@@ -114,6 +233,42 @@ exports[`Header should render correctly 1`] = `
 
 @media (min-width:1025px) {
   .c3 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .c5 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:1025px) {
+  .c5 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .c10 {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width:1025px) {
+  .c10 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .c6 {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width:1025px) {
+  .c6 {
     font-size: 1rem;
   }
 }
@@ -145,6 +300,79 @@ exports[`Header should render correctly 1`] = `
             Sign Up
           </button>
         </nav>
+      </div>
+    </div>
+    <span
+      style="display: table; clear: both;"
+    />
+  </div>
+  <div
+    class="c4"
+    style="box-sizing: border-box; position: relative; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; max-width: 960px;"
+  >
+    <div
+      style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;"
+    >
+      <div
+        style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; width: 100%; flex-basis: 100%; flex-grow: 0; flex-shrink: 0; max-width: 100%; margin-left: 0%;"
+      >
+        <h1
+          class="c5"
+          size="1"
+        >
+          Your favorite movies. Explained.
+        </h1>
+        <p
+          class="c6"
+        >
+          Figure out what happened. Then find out why.
+        </p>
+      </div>
+    </div>
+    <div
+      style="margin-left: -15px; margin-right: -15px; display: flex; flex-wrap: wrap; flex-grow: 0; flex-shrink: 0; align-items: normal; justify-content: flex-start;"
+    >
+      <div
+        style="box-sizing: border-box; min-height: 1px; position: relative; padding-left: 15px; padding-right: 15px; width: 33.333333333333336%; flex-basis: 33.333333333333336%; flex-grow: 0; flex-shrink: 0; max-width: 33.333333333333336%; margin-left: 33.333333333333336%;"
+      >
+        <form
+          data-testid="form"
+        >
+          <div
+            class="c7"
+          >
+            <div
+              class="c8"
+            >
+              <button
+                class="c9"
+                type="submit"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <input
+              class="c10"
+              id="search"
+              name="search"
+              placeholder="Search for a movie..."
+              type="text"
+              value=""
+            />
+          </div>
+        </form>
       </div>
     </div>
     <span

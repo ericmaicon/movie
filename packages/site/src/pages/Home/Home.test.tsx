@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { Home } from '~/pages/Home/Home';
+import userEvent from '@testing-library/user-event';
+
+import { fireEvent, render, waitFor } from '~/test/index';
+
+import { Home } from './Home';
 
 const items = [
   {
@@ -77,11 +81,33 @@ const items = [
   },
 ];
 
-export function HomeContainer() {
-  // eslint-disable-next-line no-empty-function
-  async function handleFilter() {}
+describe('Home', () => {
+  it('should render correctly', () => {
+    const { getByTestId } = render(
+      <Home onFilter={jest.fn()} data-testid="home" items={items} />,
+    );
 
-  return <Home onFilter={handleFilter} items={items} />;
-}
+    const homeElement = getByTestId('home');
 
-export default HomeContainer;
+    expect(homeElement).toBeInTheDocument();
+    expect(homeElement).toMatchSnapshot();
+  });
+
+  it('should call onFilter after submit form', async () => {
+    const onFilter = jest.fn();
+    const { getByRole, getByTestId } = render(
+      <Home onFilter={onFilter} items={items} />,
+    );
+
+    const searchInput = getByRole('textbox');
+    const formElement = getByTestId('form');
+
+    userEvent.type(searchInput, 'Search');
+    fireEvent.submit(formElement);
+    await waitFor(() =>
+      expect(onFilter).toHaveBeenCalledWith({
+        search: 'Search',
+      }),
+    );
+  });
+});
