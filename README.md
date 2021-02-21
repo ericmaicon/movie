@@ -29,11 +29,11 @@ It will open the [http://localhost:6006](http://localhost:6006) page with all co
 
 ```sh
 cd packages/site
-cp .env.local .env
+cp .env.example .env
 yarn start
 ```
 
-**ATTENTION:** you need to fill `REACT_APP_API_KEY` in .env with your API_KEY otherwise the api won't run.
+**ATTENTION:** you need to fill `API_KEY` in .env with your API_KEY otherwise the api won't run.
 
 ## Technologies
 
